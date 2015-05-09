@@ -1,0 +1,207 @@
+.navbar {
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-radius: 0;
+	border: none;
+	background: transparent none;
+	box-shadow: none;
+	transition: 700ms;
+	-webkit-transition: 700ms;
+	padding: 8px 0;
+	margin-bottom: 0;
+	height: 64px;
+}
+
+.navbar .nav-bg-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.nav-bg-img img {
+	margin: 0;
+	transition: 700ms;
+	-webkit-transition: 700ms;
+}
+
+.navbar.unfolded .nav-bg-img {
+
+}
+
+.navbar.unfolded {
+	padding: 20px 0;
+	height: 130px;
+	background-image: none;
+}
+
+.navbar .container {
+	z-index: 2;
+	position: relative;
+}
+
+.navbar-brand>img {
+	max-height: 100%;
+	margin: 0;
+}
+
+.navbar-default .nav>li>a {
+	color: white;
+	text-transform: uppercase;
+	font-size: 13px;
+	padding: 0;
+}
+
+.navbar-default .nav>li>a:hover {
+	color: white;
+}
+
+.unfolded .nav {
+	height: 90px;
+}
+
+.nav {
+	height: 48px;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+	justify-content: space-around;
+  	max-width: 90%;
+  	margin: 0 auto;
+  	position: relative;
+}
+
+.nav .pointer {
+  	position: absolute;
+  	left: 0;
+  	bottom: -8px;
+  	border: 15px solid white;
+  	border-left-color: transparent;
+  	border-right-color: transparent;
+  	border-top-color: transparent;
+  	width: 30px;
+  	transition: 400ms;
+  	-webkit-transition: 400ms;
+}
+
+.nav-justified>li {
+	width: auto;
+}
+
+.unfolded .navbar-brand {
+	height: 100%;
+	padding: 0;
+}
+
+.navbar-brand{
+	height: 48px;
+	padding: 0;
+}
+
+img {
+	margin: 35px auto;
+}
+
+.owl-carousel .owl-item img {
+	width: auto;
+}
+
+.intro {
+	background: url('../img/intro/first-bg.jpg') no-repeat center /cover;
+}
+
+.services p {
+	color: #686868;
+	font-size: 14px;
+}
+
+.services .title {
+	color: #cc2a4b;
+	font-size: 24px;
+	text-align: center;
+}
+
+.services img {
+	height: 120px;
+}
+
+.approach .row {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+.approach p {
+	color: #686868;
+	font-size: 24px;
+}
+
+.team p {
+	font-size: 14px;
+	color: #6a6a6a;
+	text-align: center;
+}
+
+.team .title {
+	color: #212026;
+	font-size: 24px;
+}
+
+.team .name {
+	color: #212026;
+	font-size: 18px;
+}
+
+.team .position {
+	color: #212026;
+}
+
+.team .description {
+	color: #6a6a6a;
+	font-size: 12px;
+}
+
+.about .title {
+    font-size: 48px;
+
+    color: #d32b4d;
+}
+
+.about .description {
+    font-size: 14px;
+	
+    color: #686868;
+}
+
+.about .quote {
+    color: #686868;
+	
+    font-size: 24px;
+}
+
+.about .author {
+    color: #ca2a4a;
+	
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
