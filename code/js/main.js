@@ -3,15 +3,21 @@ $(document).ready(function(){
 	$('#fullpage').fullpage({
 		anchors: ['intro', 'services', 'approach', 'team', 'portfolio', 'about', 'contact'],
 		menu: '.nav',
-		continuousVertical: true,
-		paddingTop: '80px',
+		paddingTop: '64px',
 
 		//get current slide to define menu state(folded/unfolded):
 		onLeave: function(index, nextIndex, direction){
-			if( nextIndex===1 ) {
+			if( nextIndex === 1 ) {
 				$(".navbar").addClass("unfolded");
+				$(".pointer").addClass("hidden");
 			} else {
-				$(".navbar").removeClass("unfolded");
+				setTimeout(function(){
+					$(".navbar").removeClass("unfolded");
+				}, 300);
+
+				setTimeout(function(){
+					$(".pointer").removeClass("hidden");
+				}, 1000);
 			};
 
 			//set position of menu pointer
@@ -21,9 +27,26 @@ $(document).ready(function(){
 
 	});
 
+	$('.approach .owl-carousel').owlCarousel({
+	    loop: false,
+	    items: 1,
+	});
+
 	$('.team .owl-carousel').owlCarousel({
 	    loop: false,
 	    items: 4,
+	    nav: true,
+	    dots: false,
+	    navContainer: ".navs",
+	    navText: '<>',
+	});
+
+	$('.portfolio .owl-carousel').owlCarousel({
+	    loop: true,
+	    items: 1,
+    	autoplay: true,
+    	autoplayTimeout: 3000,
+    	autoplayHoverPause: true,
 	});
 
 	$('.about .owl-carousel').owlCarousel({
