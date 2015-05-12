@@ -23,8 +23,15 @@ $(document).ready(function(){
 			//set position of menu pointer
 			var pointerTranslate = $(".nav li").eq(nextIndex-1).position().left + $(".nav li").eq(nextIndex-1).width()/2 - 15;
 			$(".pointer").css("margin-left", pointerTranslate);
+
+			$("body").attr("active-section", $("article.active").data("anchor"));
 		},
 
+	});
+
+	$('.intro .owl-carousel').owlCarousel({
+	    loop: true,
+	    items: 1,
 	});
 
 	$('.approach .owl-carousel').owlCarousel({

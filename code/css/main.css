@@ -1,3 +1,7 @@
+a, a:hover, a:focus, a:active {
+	text-decoration: none;
+}
+
 .navbar {
 	z-index: 10;
 	position: fixed;
@@ -44,8 +48,8 @@
 	padding: 0;
 }
 
-.navbar-default .nav>li>a:hover {
-	color: white;
+.nav>li>a:hover, .nav>li>a:focus {
+	background-color: transparent;
 }
 
 .unfolded .nav {
@@ -74,12 +78,20 @@
   	border-top-color: transparent;
   	width: 30px;
   	opacity: 1;
-	transition: 700ms;
-	-webkit-transition: 700ms;
+	transition: margin-left 700ms;
+	-webkit-transition: margin-left 700ms;
 }
 
 .unfolded .pointer {
 	opacity: 0;
+}
+
+body[active-section="portfolio"] .pointer {
+	border-bottom-color: #dcc6bf;
+}
+
+body[active-section="contact"] .pointer {
+	border-bottom-color: #ca2a4a;
 }
 
 .nav-justified>li {
@@ -108,6 +120,31 @@ img {
 	background: url('../img/intro/first-bg.jpg') no-repeat center /cover;
 }
 
+.intro .item .title {
+	font-size: 48px;
+	color: white;
+}
+
+.intro .item .description {
+	font-size: 24px;
+	color: white;
+}
+
+.intro .item .link {
+	color: white;
+	display: block;
+	text-transform: uppercase;
+	border: 1px solid white;
+	padding: 8px;
+	text-align: center;
+	max-width: 50%;
+	margin: 25px 0 45px;
+}
+
+.intro .owl-dots {
+	text-align: left;
+}
+
 .services p {
 	color: #686868;
 	font-size: 14px;
@@ -133,6 +170,13 @@ img {
 .approach p {
 	color: #686868;
 	font-size: 24px;
+}
+
+.approach .owl-dots {
+	  width: 66.66666667%;
+	  margin-left: 33%;
+  text-align: left;
+  padding-left: 15px;
 }
 
 .team p {
@@ -249,12 +293,70 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
     font-size: 24px;
 }
 
+.about .quote span {
+	font-size: 32px;
+	color: #ca2a4a;
+}
+
 .about .author {
     color: #ca2a4a;
 	
     font-size: 18px;
 }
 
+.about .owl-dots {
+	  max-width: 50%;
+  margin-left: 50%;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.contact {
+	background-color: #ca2a4a;
+}
+
+.contact .title {
+	font-size: 48px;
+	color: white;
+}
+
+.contact .description {
+	font-size: 24px;
+	color: white;
+}
+
+
+
+/* miscellaneous */
+.owl-theme .owl-dots .owl-dot span {
+	background: transparent url('../img/miscellaneous/dot-white.png');
+	border-radius: 0;
+	width: 14px;
+	height: 16px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+	background: transparent url('../img/miscellaneous/dot-white-active.png');
+}
+
+.approach .owl-theme .owl-dots .owl-dot span, .about .owl-theme .owl-dots .owl-dot span {
+	background: transparent url('../img/miscellaneous/dot-red.png');
+}
+
+.approach .owl-theme .owl-dots .owl-dot.active span, .approach .owl-theme .owl-dots .owl-dot:hover span, .about .owl-theme .owl-dots .owl-dot.active span, .about .owl-theme .owl-dots .owl-dot:hover span {
+	background: transparent url('../img/miscellaneous/dot-red-active.png');
+}
+
+.portfolio .owl-theme .owl-dots .owl-dot span {
+	background: transparent url('../img/miscellaneous/dot-gray.png');
+	border-radius: 0;
+	width: 14px;
+	height: 16px;
+}
+
+.portfolio .owl-theme .owl-dots .owl-dot.active span, .portfolio .owl-theme .owl-dots .owl-dot:hover span {
+	background: transparent url('../img/miscellaneous/dot-gray-active.png');
+}
 
 
 
