@@ -4,6 +4,7 @@ $(document).ready(function(){
 		anchors: ['intro', 'services', 'approach', 'team', 'portfolio', 'about', 'contact'],
 		menu: '.nav',
 		paddingTop: '64px',
+		responsive: 768,
 
 		//get current slide to define menu state(folded/unfolded):
 		onLeave: function(index, nextIndex, direction){
@@ -41,17 +42,27 @@ $(document).ready(function(){
 
 	$('.team .owl-carousel').owlCarousel({
 	    loop: false,
-	    items: 4,
-	    nav: true,
 	    dots: false,
 	    navContainer: ".navs",
 	    navText: '<>',
+	    responsive: {
+	    	0: {
+	    		nav: false,
+	    		items: 1,
+	    		autoplay: true,
+	    		autoplayTimeout: 2000,
+	    	},
+	    	768: {
+	    		items: 4,
+	    		nav: true,
+	    	}
+	    },
 	});
 
 	$('.portfolio .owl-carousel').owlCarousel({
 	    loop: true,
 	    items: 1,
-    	autoplay: true,
+    	//autoplay: true,
     	autoplayTimeout: 3000,
     	autoplayHoverPause: true,
 	});
