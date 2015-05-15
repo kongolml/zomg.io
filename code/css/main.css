@@ -380,6 +380,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 
 
 
+.modal-content {
+	background-color: #f3f4f7;
+	  border-radius: 0;
+}
+
+.modal-content p {
+	color: #51696d;
+	font-size: 14px;
+}
+
+.modal-content .title {
+	font-size: 60px;
+}
+
+
+
 
 @media (max-width: 768px) {
 
