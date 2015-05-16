@@ -75,4 +75,13 @@ $(document).ready(function(){
     	autoplayHoverPause: true,
 	});
 
+	//disable onepage-scroll on modal open and enable on modal show:
+	$('.modal').on('show.bs.modal', function (e) {
+	  $.fn.fullpage.setAllowScrolling(false);
+	});
+
+	$('.modal').on('hide.bs.modal', function (e) {
+	  $.fn.fullpage.setAllowScrolling(true);
+	});
+
 })

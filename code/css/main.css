@@ -1,3 +1,22 @@
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('../fonts/HelveticaNeue.ttf');
+}
+
+@font-face {
+	font-family: 'Helvetica Neue Bold';
+	src: url('../fonts/HelveticaNeueBold.ttf');
+}
+
+@font-face {
+	font-family: 'Helvetica Neue Thin';
+	src: url('../fonts/HelveticaNeueUltraLight.ttf');
+}
+
+*, *:hover, *:active, *:focus {
+	outline: none;
+}
+
 a, a:hover, a:focus, a:active {
 	text-decoration: none;
 }
@@ -63,6 +82,7 @@ a, a:hover, a:focus, a:active {
 	align-items: center;
 	-webkit-align-items: center;
 	justify-content: space-around;
+	-webkit-justify-content: space-around;
   	max-width: 90%;
   	margin: 0 auto;
   	position: relative;
@@ -112,6 +132,14 @@ img {
 	margin: 35px auto;
 }
 
+p {
+	font-family: 'Helvetica Neue';
+}
+
+strong, b {
+	font-family: 'Helvetica Neue';
+}
+
 .owl-carousel .owl-item img {
 	width: auto;
 }
@@ -123,11 +151,13 @@ img {
 .intro .item .title {
 	font-size: 48px;
 	color: white;
+	font-family: 'Helvetica Neue Bold';
 }
 
 .intro .item .description {
 	font-size: 24px;
 	color: white;
+	font-family: 'Helvetica Neue Thin';
 }
 
 .intro .item .link {
@@ -154,6 +184,7 @@ img {
 	color: #cc2a4b;
 	font-size: 24px;
 	text-align: center;
+	font-family: 'Helvetica Neue Bold';
 }
 
 .services img {
@@ -170,6 +201,7 @@ img {
 .approach p {
 	color: #686868;
 	font-size: 24px;
+	font-family: 'Helvetica Neue Thin';
 }
 
 .approach .owl-dots {
@@ -188,6 +220,7 @@ img {
 .team .title {
 	color: #212026;
 	font-size: 24px;
+	font-family: 'Helvetica Neue Bold';
 }
 
 .team .name {
@@ -258,6 +291,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 .portfolio .title {
     font-size: 48px;
     color: #51696d;
+    font-family: 'Helvetica Neue Bold';
 }
 
 .portfolio .description {
@@ -299,6 +333,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 .about .title {
     font-size: 48px;
     color: #d32b4d;
+    font-family: 'Helvetica Neue Bold';
 }
 
 .about .description {
@@ -338,6 +373,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 .contact .title {
 	font-size: 48px;
 	color: white;
+	font-family: 'Helvetica Neue Bold';
 }
 
 .contact .description {
@@ -383,15 +419,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 .modal-content {
 	background-color: #f3f4f7;
 	  border-radius: 0;
+	  text-align: center;
 }
 
 .modal-content p {
 	color: #51696d;
 	font-size: 14px;
+	font-family: 'Helvetica Neue Thin';
+}
+
+.modal-content .first {
+	text-align: left;
 }
 
 .modal-content .title {
 	font-size: 60px;
+	margin-top: 60px;
+	font-family: 'Helvetica Neue Bold';
+}
+
+.modal .close.top {
+	text-align: right;
+	color: #cc3b58;
+	font-family: 'Helvetica Neue Thin';
+	opacity: 1;
+}
+
+.modal .close.bottom {
+	text-align: center;
+	color: #cc3b58;
+	font-family: 'Helvetica Neue Thin';
+	opacity: 1;
+	float: none;
+}
+
+.modal {
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 
