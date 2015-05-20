@@ -490,6 +490,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 	overflow-y: scroll !important;
 }
 
+.modal-open {
+	overflow: hidden !important;
+	padding-right: 0 !important;
+}
+
 
 
 

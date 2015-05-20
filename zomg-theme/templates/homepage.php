@@ -220,7 +220,6 @@ get_header(); ?>
                               ?>
 
                                 <div class="item">
-                                  <?php echo $slideNum ?>
                                   <div class="col-xs-12 col-md-5 col-md-offset-1 text">
                                     <p class="title"><?php the_sub_field('slide_title') ?></p>
                                     <p class="description"><?php the_sub_field('slide_description') ?></p><br>
@@ -274,37 +273,7 @@ get_header(); ?>
                                       <div class="modal-body">
                                         <button type="button" class="close top" data-dismiss="modal" aria-label="Close">CLOSE<br><span aria-hidden="true">&times;</span></button>
                                           <div class="row">
-                                            <div class="col-xs-10 col-xs-offset-1 first">
-                                              <div class="col-xs-12 col-md-6">
-                                                <p class="title">Kindara</p>
-                                                <p>At Kindara, we give you the knowledge, support, and proper tools to understand your fertility and be in the driver’s seat of your own body.</p>
-                                                <br><br>
-                                                <p>At Kindara, we give you the knowledge, support, and proper tools to understand your fertility and be in the driver’s seat of your own body.</p>
-                                              </div><!-- col-md-6 -->
-                                              <div class="col-xs-12 col-md-6">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/1.png" class="img-responsive">
-                                              </div><!-- col-md-6 -->
-                                            </div><!-- col-xs-10 -->
-                                          </div><!-- row -->
-
-                                          <div class="row">
-                                            <div class="col-xs-10 col-xs-offset-1">
-                                              <div class="col-xs-12">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/2.png" class="img-responsive">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum felis eu arcu vestibulum suscipit quis ut quam. Nam dapibus augue turpis, nec sodales ante mollis et. </p>
-                                              </div><!-- col-md-6 -->
-                                            </div><!-- col-xs-10 -->
-                                          </div><!-- row -->
-
-                                          <div class="row">
-                                            <div class="col-xs-10 col-xs-offset-1">
-                                              <div class="col-xs-12">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/3.png" class="img-responsive">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/4.png" class="img-responsive">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum felis eu arcu vestibulum suscipit quis ut quam. Nam dapibus augue turpis, nec sodales ante mollis et. </p>
-                                                <p class="title">Thank you!</p>
-                                              </div><!-- col-md-6 -->
-                                            </div><!-- col-xs-10 -->
+                                            <?php the_content(); ?>
                                           </div><!-- row -->
                                           <div class="close-modal">
                                             <button type="button" class="close bottom" data-dismiss="modal" aria-label="Close">CLOSE<br><span aria-hidden="true">&times;</span></button>
