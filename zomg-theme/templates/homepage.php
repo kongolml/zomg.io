@@ -3,7 +3,7 @@
 /* Template Author: Konstantin Golosov <kongol.ml@gmail.com> */
 get_header(); ?>
 
-	<section id="fullpage">
+  <section id="fullpage">
 
           <article class="intro section">
             <div class="container">
@@ -181,33 +181,155 @@ get_header(); ?>
 
           <article class="portfolio section">
 
-                  
-                	<div class="owl-carousel">
+                <?php
 
-                    <div class="item">
-                      <div class="col-xs-12 col-md-5 col-md-offset-1 text">
-                        <p class="title">Talented Dlley</p>
-                        <p class="description">Zomg ishly-skilled hardware engineers and take selective hardware projects.</p><br>
-                        <a href="#" data-toggle="modal" data-target="#modal">More</a>
-                      </div><!-- col-md-6 -->
-                      <div class="col-xs-12 col-md-6 hidden-xs">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/1.png">
-                      </div><!-- col-md-6 -->
-                    </div><!-- item -->
+                  $portfolio_args = array(
+                    'posts_per_page' => -1,
+                    'cat' => 4,
+                    'order' => 'ASC'
+                  );
 
-                    <div class="item">
-                      <div class="col-xs-12 col-md-5 col-md-offset-1 text">
-                        <p class="title">Talented Devs From the Valley</p>
-                        <p class="description">Zomg is located at the heart ohave highly-skilled hardware engineers and take selective hardware projects.</p><br>
-                        <a href="#">More</a>
-                      </div><!-- col-md-6 -->
-                      <div class="col-xs-12 col-md-6 hidden-xs">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/2.png">
-                      </div><!-- col-md-6 -->
-                    </div><!-- item -->
+                  $portfolio_query = new WP_Query( $portfolio_args );
 
-                  </div><!-- owl-carousel -->
+                  // The Loop
+                  if ( $portfolio_query->have_posts() ) {
+                    ?>
+                        <div class="owl-carousel">
 
+                          <?php
+                          while ( $portfolio_query->have_posts() ) {
+                            $portfolio_query->the_post();
+                            ?>
+                              
+
+
+                    <?php
+
+                      // check if the repeater field has rows of data
+                      if( have_rows('portfolio_content') ) { 
+
+                      //seting up links for modal windows
+                      $slideNum = 0;
+
+                    ?>
+
+                        <?php  
+                          // loop through the rows of data
+                          while ( have_rows('portfolio_content') ) : the_row();
+                          $slideNum++;
+                              ?>
+
+                                <div class="item">
+                                  <?php echo $slideNum ?>
+                                  <div class="col-xs-12 col-md-5 col-md-offset-1 text">
+                                    <p class="title"><?php the_sub_field('slide_title') ?></p>
+                                    <p class="description"><?php the_sub_field('slide_description') ?></p><br>
+                                    <a href="#" data-toggle="modal" data-target="#modal-<?php echo $slideNum ?>">More</a>
+                                  </div><!-- col-md-6 -->
+                                  <div class="col-xs-12 col-md-6 hidden-xs">
+                                    <img src="<?php the_sub_field('slide_image') ?>">
+                                  </div><!-- col-md-6 -->
+                                </div><!-- item -->
+
+                              <?php
+
+                          endwhile;
+                        ?>
+
+            
+                    <?php 
+                      }
+                    ?>
+
+
+
+
+                            <?php
+                          }
+                          ?>
+
+                      </div><!-- owl-carousel -->
+
+
+                      <?php
+
+                      // check if the repeater field has rows of data
+                      if( have_rows('portfolio_content') ) { 
+
+                      //seting up links for modal windows
+                      $slideNum = 0;
+
+                    ?>
+
+                        <?php  
+                          // loop through the rows of data
+                          while ( have_rows('portfolio_content') ) : the_row();
+                          $slideNum++;
+                              ?>
+
+                              <!-- Modal -->
+                                <div class="modal fade" id="modal-<?php echo $slideNum ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                      <div class="modal-body">
+                                        <button type="button" class="close top" data-dismiss="modal" aria-label="Close">CLOSE<br><span aria-hidden="true">&times;</span></button>
+                                          <div class="row">
+                                            <div class="col-xs-10 col-xs-offset-1 first">
+                                              <div class="col-xs-12 col-md-6">
+                                                <p class="title">Kindara</p>
+                                                <p>At Kindara, we give you the knowledge, support, and proper tools to understand your fertility and be in the driver’s seat of your own body.</p>
+                                                <br><br>
+                                                <p>At Kindara, we give you the knowledge, support, and proper tools to understand your fertility and be in the driver’s seat of your own body.</p>
+                                              </div><!-- col-md-6 -->
+                                              <div class="col-xs-12 col-md-6">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/1.png" class="img-responsive">
+                                              </div><!-- col-md-6 -->
+                                            </div><!-- col-xs-10 -->
+                                          </div><!-- row -->
+
+                                          <div class="row">
+                                            <div class="col-xs-10 col-xs-offset-1">
+                                              <div class="col-xs-12">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/2.png" class="img-responsive">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum felis eu arcu vestibulum suscipit quis ut quam. Nam dapibus augue turpis, nec sodales ante mollis et. </p>
+                                              </div><!-- col-md-6 -->
+                                            </div><!-- col-xs-10 -->
+                                          </div><!-- row -->
+
+                                          <div class="row">
+                                            <div class="col-xs-10 col-xs-offset-1">
+                                              <div class="col-xs-12">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/3.png" class="img-responsive">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/4.png" class="img-responsive">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum felis eu arcu vestibulum suscipit quis ut quam. Nam dapibus augue turpis, nec sodales ante mollis et. </p>
+                                                <p class="title">Thank you!</p>
+                                              </div><!-- col-md-6 -->
+                                            </div><!-- col-xs-10 -->
+                                          </div><!-- row -->
+                                          <div class="close-modal">
+                                            <button type="button" class="close bottom" data-dismiss="modal" aria-label="Close">CLOSE<br><span aria-hidden="true">&times;</span></button>
+                                          </div><!-- close-modal -->
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div><!-- modal -->
+
+                              <?php
+
+                          endwhile;
+                        ?>
+                    <?php 
+                      }
+                    ?>
+
+
+                    <?php
+                  } else {
+                    
+                  }
+                wp_reset_postdata();
+                ?>
             
           </article><!-- portfolio -->
 
@@ -215,45 +337,44 @@ get_header(); ?>
             <div class="container">
               <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0">
-                  <div class="owl-carousel">
 
-                    <div class="item">
-                      <div class="col-xs-12 col-md-6">
-                        <p class="title">Talented Devs From the Valley</p>
-                        <p class="description">Zomg is located at the heart of the Silicon Valley and is comprised of engineers with experience from large Silicon Valley corporations such as Linkedin, Intel, Google, Apple. We focus on software and application development, web development, prototyping. We also have highly-skilled hardware engineers and take selective hardware projects.</p>
-                      </div><!-- col-md-6 -->
-                      <div class="col-xs-12 col-md-6">
-                        <p class="quote"><span>"</span>Zomg folks developed an API for us in very productive and efficient way, meeting short deadlines” - 
-                        <span class="author">Alina Kharina, CEO of SkillGravity</span>
-                        </p>
-                      </div><!-- col-md-6 -->
-                    </div><!-- item -->
+                  <?php
 
-                    <div class="item">
-                      <div class="col-xs-12 col-md-6">
-                        <p class="title">Talented Devs From the Valley</p>
-                        <p class="description">Zomg is located at the heart ohave highly-skilled hardware engineers and take selective hardware projects.</p>
-                      </div><!-- col-md-6 -->
-                      <div class="col-xs-12 col-md-6">
-                        <p class="quote"><span>"</span>Zomg for us in very productive and efficient way, meeting short deadlines” - 
-                        <span class="author">Alinina, CEO of SkillGravity</span>
-                        </p>
-                      </div><!-- col-md-6 -->
-                    </div><!-- item -->
+                    // check if the repeater field has rows of data
+                    if( have_rows('about_slider') ) { ?>
 
-                    <div class="item">
-                      <div class="col-xs-12 col-md-6">
-                        <p class="title">Talented Devs Fr</p>
-                        <p class="description">Zomg is l. We also have highly-skilled hardware engineers and take selective hardware projects.</p>
-                      </div><!-- col-md-6 -->
-                      <div class="col-xs-12 col-md-6">
-                        <p class="quote"><span>"</span>Zomg folks developeAPI for us in very produt way, meeting short deadlines” - 
-                        <span class="author">Alina KhlGravity</span>
-                        </p>
-                      </div><!-- col-md-6 -->
-                    </div><!-- item -->
+                      <div class="owl-carousel">
 
-                  </div><!-- owl-carousel -->
+                        <?php  
+                          // loop through the rows of data
+                          while ( have_rows('about_slider') ) : the_row();
+
+                              ?>
+
+                                <div class="item">
+                                  <div class="col-xs-12 col-md-6">
+                                    <p class="title"><?php the_sub_field('slide_title') ?></p>
+                                    <p class="description"><?php the_sub_field('slide_description') ?></p>
+                                    </div><!-- col-md-6 -->
+                                  </p>
+                                  <div class="col-xs-12 col-md-6">
+                                    <p class="quote"><span>"</span><?php the_sub_field('slide_testimonial') ?>” - 
+                                      <span class="author"><?php the_sub_field('testimonial_author') ?></span>
+                                    </p>
+                                  </div><!-- col-md-6 -->
+                                </div><!-- item -->
+
+                              <?php
+
+                          endwhile;
+                        ?>
+
+                      </div><!-- owl-carousel -->
+
+                    <?php 
+                      }
+                    ?>
+
                 </div><!-- col-xs-10 -->
               </div><!-- row -->
             </div><!-- container -->
@@ -274,53 +395,5 @@ get_header(); ?>
           </article><!-- contact -->
 
         </section>
-
-        <!-- Modal -->
-		<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		  <div class="modal-dialog modal-lg">
-		    <div class="modal-content">
-		      <div class="modal-body">
-		        <button type="button" class="close top" data-dismiss="modal" aria-label="Close">CLOSE<br><span aria-hidden="true">&times;</span></button>
-		          <div class="row">
-		            <div class="col-xs-10 col-xs-offset-1 first">
-		              <div class="col-xs-12 col-md-6">
-		                <p class="title">Kindara</p>
-		                <p>At Kindara, we give you the knowledge, support, and proper tools to understand your fertility and be in the driver’s seat of your own body.</p>
-		                <br><br>
-		                <p>At Kindara, we give you the knowledge, support, and proper tools to understand your fertility and be in the driver’s seat of your own body.</p>
-		              </div><!-- col-md-6 -->
-		              <div class="col-xs-12 col-md-6">
-		                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/1.png" class="img-responsive">
-		              </div><!-- col-md-6 -->
-		            </div><!-- col-xs-10 -->
-		          </div><!-- row -->
-
-		          <div class="row">
-		            <div class="col-xs-10 col-xs-offset-1">
-		              <div class="col-xs-12">
-		                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/2.png" class="img-responsive">
-		                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum felis eu arcu vestibulum suscipit quis ut quam. Nam dapibus augue turpis, nec sodales ante mollis et. </p>
-		              </div><!-- col-md-6 -->
-		            </div><!-- col-xs-10 -->
-		          </div><!-- row -->
-
-		          <div class="row">
-		            <div class="col-xs-10 col-xs-offset-1">
-		              <div class="col-xs-12">
-		                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/3.png" class="img-responsive">
-		                <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio/modal/4.png" class="img-responsive">
-		                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum felis eu arcu vestibulum suscipit quis ut quam. Nam dapibus augue turpis, nec sodales ante mollis et. </p>
-		                <p class="title">Thank you!</p>
-		              </div><!-- col-md-6 -->
-		            </div><!-- col-xs-10 -->
-		          </div><!-- row -->
-		          <div class="close-modal">
-		            <button type="button" class="close bottom" data-dismiss="modal" aria-label="Close">CLOSE<br><span aria-hidden="true">&times;</span></button>
-		          </div><!-- close-modal -->
-		        
-		      </div>
-		    </div>
-		  </div>
-		</div><!-- modal -->
 
 <?php get_footer(); ?>
