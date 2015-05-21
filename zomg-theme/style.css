@@ -71,6 +71,17 @@ a, a:hover, a:focus, a:active {
 	background-color: transparent;
 }
 
+nav li.lang a {
+	padding: 8px !important;
+	color: #C2717B !important;
+	background-color: white;
+	display: inline-block;
+}
+
+nav li.lang a:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
 .unfolded .nav {
 	height: 90px;
 }

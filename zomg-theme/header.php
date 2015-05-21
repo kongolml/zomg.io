@@ -63,6 +63,10 @@
                 <li data-menuanchor="portfolio"><a href="#portfolio">portfolio</a></li>
                 <li data-menuanchor="about"><a href="#about">about</a></li>
                 <li data-menuanchor="contact"><a href="#contact">contact</a></li>
+                <li class="lang">
+                    <a class="en" href="<?php echo get_site_url(); ?>">en</a>
+                    <a class="ru" href="<?php echo get_site_url(); ?>/ru">ru</a>
+                </li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container -->
