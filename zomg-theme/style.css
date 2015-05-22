@@ -127,6 +127,7 @@ body[active-section="contact"] .pointer {
 
 .nav-justified>li {
 	width: auto;
+	float: left;
 }
 
 .unfolded .navbar-brand {
@@ -506,15 +507,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 	padding-right: 0 !important;
 }
 
+.modal-dialog {
+	margin-top: 8%;
+}
+
 
 
 
 @media (max-width: 768px) {
 
 	.nav, .navbar {
-		height: auto;
-		padding: 15px;
+		height: auto !important;
+		padding: 15px !important;
 		display: block;
+	}
+
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: white;
+	}
+
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+		  background-color: rgba(221, 221, 221, 0.21);
+	}
+
+	nav {
+		background-color: rgba(182, 120, 120, 0.93) !important;
+	}
+
+	.unfolded .navbar-brand {
+		height: 48px;
+	}
+
+	.navbar-toggle {
+		margin-right: 0;
+	}
+
+	.nav-justified>li {
+		float: none;
+		margin: 18px 0;
+	}
+
+	nav li.lang {
+		text-align: center;
 	}
 
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
