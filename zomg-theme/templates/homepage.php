@@ -54,23 +54,23 @@ get_header(); ?>
           <article class="services section">
             <div class="container">
               <div class="row">
-                <div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0">
+                <div class="col-xs-12 col-md-12 col-md-offset-0">
 
                   <div class="col-xs-12 col-md-4">
                     <p class="title"><?php the_field('left_section_header'); ?></p>
-                    <img src="<?php the_field('left_section_image'); ?>" class="img-responsive">
+                    <img src="<?php the_field('left_section_image'); ?>" class="img-responsive hidden-xs">
                     <p><?php the_field('left_section_text'); ?></p>
                   </div><!-- col-xs-4 -->
 
                   <div class="col-xs-12 col-md-4">
                     <p class="title"><?php the_field('center_section_header'); ?></p>
-                    <img src="<?php the_field('center_section_image'); ?>" class="img-responsive">
+                    <img src="<?php the_field('center_section_image'); ?>" class="img-responsive hidden-xs">
                     <p><?php the_field('center_section_text'); ?></p>
                   </div><!-- col-xs-4 -->
 
                   <div class="col-xs-12 col-md-4">
                     <p class="title"><?php the_field('right_section_header'); ?></p>
-                    <img src="<?php the_field('right_section_image'); ?>" class="img-responsive">
+                    <img src="<?php the_field('right_section_image'); ?>" class="img-responsive hidden-xs">
                     <p><?php the_field('right_section_text'); ?></p>
                   </div><!-- col-xs-4 -->
 
@@ -82,7 +82,7 @@ get_header(); ?>
           <article class="approach section">
             <div class="container">
               <div class="row">
-                <div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0">
+                <div class="col-xs-12 col-md-12 col-md-offset-0">
 
                   <?php
 

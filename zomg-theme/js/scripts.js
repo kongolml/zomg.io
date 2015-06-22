@@ -62,7 +62,7 @@
 		    responsive: {
 		    	0: {
 		    		nav: false,
-		    		items: 1,
+		    		items: 2,
 		    		autoplay: true,
 		    		autoplayTimeout: 2000,
 		    	},

@@ -594,4 +594,29 @@ background: linear-gradient(to bottom,  #dcc6bf 0%,#f0e7e2 100%); /* W3C */
 		font-size: 32px;
 	}
 
+
+	.intro .item .title {
+		font-size: 36px;
+	}
+
+	.approach p {
+		font-size: 18px;
+	}
+
+	.team .navs {
+		bottom: -55px;
+		margin-top: 0;
+	}
+
+	.team .navs .owl-prev {
+		position: absolute;
+		left: 40%;
+	}
+
+	.team .navs .owl-next {
+		position: absolute;
+		right: 40%;
+	}
+
+
 }
