@@ -1,16 +1,16 @@
 @font-face {
 	font-family: 'Helvetica Neue';
-	src: url('fonts/HelveticaNeue.ttf');
+	src: url('fonts/HelveticaNeue.woff');
 }
 
 @font-face {
 	font-family: 'Helvetica Neue Bold';
-	src: url('fonts/HelveticaNeueBold.ttf');
+	src: url('fonts/HelveticaNeueBold.woff');
 }
 
 @font-face {
 	font-family: 'Helvetica Neue Thin';
-	src: url('fonts/HelveticaNeueUltraLight.ttf');
+	src: url('fonts/HelveticaNeueUltraLight.woff');
 }
 
 *, *:hover, *:active, *:focus {
@@ -65,6 +65,7 @@ a, a:hover, a:focus, a:active {
 	text-transform: uppercase;
 	font-size: 13px;
 	padding: 0;
+	font-family: 'Helvetica Neue Bold';
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
@@ -247,6 +248,8 @@ strong, b {
 .team .description {
 	color: #6a6a6a;
 	font-size: 12px;
+	max-width: 80%;
+	margin: 0 auto;
 }
 
 .team .row {
@@ -285,6 +288,10 @@ strong, b {
 	border-color: #f0f0f0;
 }
 
+.team img {
+	margin-top: 70px;
+}
+
 .portfolio {
 	background: #dcc6bf; /* Old browsers */
 background: -moz-linear-gradient(top,  #dcc6bf 0%, #f0e7e2 100%); /* FF3.6+ */
@@ -293,7 +300,6 @@ background: -webkit-linear-gradient(top,  #dcc6bf 0%,#f0e7e2 100%); /* Chrome10+
 background: -o-linear-gradient(top,  #dcc6bf 0%,#f0e7e2 100%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top,  #dcc6bf 0%,#f0e7e2 100%); /* IE10+ */
 background: linear-gradient(to bottom,  #dcc6bf 0%,#f0e7e2 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', endColorstr='#f0e7e2',GradientType=0 ); /* IE6-9 */
 }
 
 .portfolio {
@@ -396,7 +402,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 .contact form input, .contact form textarea {
 	background-color: #d34f69;
 	font-size: 16px;
-	color: #ca2a4a;
+	color: white;
 	border: none;
 	padding: 10px;
 	transition: 300ms;
@@ -407,6 +413,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 
 .contact form input:focus, .contact form textarea:focus {
 	background-color: #e9a6b4;
+	color: #ca2a4a;
 }
 
 .contact form input[type="submit"] {
@@ -494,6 +501,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 	float: none;
 }
 
+.modal .close.bottom span {
+	font-size: 32px;
+}
+
 .modal {
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -569,6 +580,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcc6bf', end
 	.portfolio .item .text p {
 		max-width: none;
 		width: 100%;
+	}
+
+	.services .col-md-4 {
+		margin-bottom: 100px;
+	}
+
+	.intro, .intro .fp-tableCell {
+		height: 75vh !important;
+	}
+
+	.about .title, .portfolio .title {
+		font-size: 32px;
 	}
 
 }

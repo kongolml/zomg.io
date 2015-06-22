@@ -3,7 +3,7 @@
 /* Template Author: Konstantin Golosov <kongol.ml@gmail.com> */
 get_header(); ?>
 
-  <section id="fullpage">
+	<section id="fullpage">
 
           <article class="intro section">
             <div class="container">
@@ -31,7 +31,7 @@ get_header(); ?>
                                   <p class="description">
                                     <?php the_sub_field('slide_body'); ?>
                                   </p>
-                                  <a href="<?php the_sub_field('slide_link'); ?>" class="link">learn more</a>
+                                  <a href="#" class="link">learn more</a>
                                 </div><!-- item -->
 
                               <?php
@@ -276,7 +276,7 @@ get_header(); ?>
                                             <?php the_content(); ?>
                                           </div><!-- row -->
                                           <div class="close-modal">
-                                            <button type="button" class="close bottom" data-dismiss="modal" aria-label="Close">CLOSE<br><span aria-hidden="true">&times;</span></button>
+                                            <button type="button" class="close bottom" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> CLOSE</button>
                                           </div><!-- close-modal -->
                                         
                                       </div>
@@ -321,12 +321,12 @@ get_header(); ?>
                               ?>
 
                                 <div class="item">
-                                  <div class="col-xs-12 col-md-6">
+                                  <div class="col-xs-12 col-md-5">
                                     <p class="title"><?php the_sub_field('slide_title') ?></p>
                                     <p class="description"><?php the_sub_field('slide_description') ?></p>
                                     </div><!-- col-md-6 -->
                                   </p>
-                                  <div class="col-xs-12 col-md-6">
+                                  <div class="col-xs-12 col-md-6 col-md-offset-1">
                                     <p class="quote"><span>"</span><?php the_sub_field('slide_testimonial') ?>” - 
                                       <span class="author"><?php the_sub_field('testimonial_author') ?></span>
                                     </p>

@@ -9,6 +9,7 @@
 			menu: '.nav',
 			paddingTop: '64px',
 			responsive: 768,
+			scrollBar:true,
 
 			//get current slide to define menu state(folded/unfolded):
 			onLeave: function(index, nextIndex, direction){
@@ -34,9 +35,18 @@
 
 		});
 
+		$(".owl-carousel").each(function(){
+			$(this).width($(this).width());
+		});
+
 		$('.intro .owl-carousel').owlCarousel({
 		    loop: true,
 		    items: 1,
+		});
+
+		$(".intro .link").click(function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSectionDown();
 		});
 
 		$('.approach .owl-carousel').owlCarousel({

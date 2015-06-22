@@ -31,7 +31,7 @@ get_header(); ?>
                                   <p class="description">
                                     <?php the_sub_field('slide_body'); ?>
                                   </p>
-                                  <a href="<?php the_sub_field('slide_link'); ?>" class="link">learn more</a>
+                                  <a href="#" class="link">learn more</a>
                                 </div><!-- item -->
 
                               <?php
@@ -321,12 +321,12 @@ get_header(); ?>
                               ?>
 
                                 <div class="item">
-                                  <div class="col-xs-12 col-md-6">
+                                  <div class="col-xs-12 col-md-5">
                                     <p class="title"><?php the_sub_field('slide_title') ?></p>
                                     <p class="description"><?php the_sub_field('slide_description') ?></p>
                                     </div><!-- col-md-6 -->
                                   </p>
-                                  <div class="col-xs-12 col-md-6">
+                                  <div class="col-xs-12 col-md-6 col-md-offset-1">
                                     <p class="quote"><span>"</span><?php the_sub_field('slide_testimonial') ?>” - 
                                       <span class="author"><?php the_sub_field('testimonial_author') ?></span>
                                     </p>
